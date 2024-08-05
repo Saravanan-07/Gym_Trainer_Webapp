@@ -1,120 +1,67 @@
 {
   "users": [
     {
-      "id": "f0b8",
-      "username": "Sachiv 26",
-      "email": "sachiv26@gmail.com",
-      "password": "sachiv26"
-    },
-    {
       "id": "049b",
       "username": "demouser",
       "email": "demo@gmail.com",
       "password": "12345678"
     },
     {
-      "id": "d88f",
-      "username": "sibiarasu",
-      "email": "sibiarasu@gmail.com",
-      "password": "Sibiarasu@23"
-    },
-    {
       "id": "8b1b",
       "username": "Saravanan",
       "email": "saravanan@gmail.com",
       "password": "Sarav@234"
-    },
-    {
-      "id": "2b0e",
-      "username": "sachivmks@gmail.com",
-      "email": "sachiv26@gmail.com",
-      "password": "Sachiv@26"
     }
   ],
   "workouts": [
     {
-      "id": "cac1",
-      "name": "Bench presss",
-      "description": "The bench press is a compound exercise that targets the muscles of the upper body",
-      "exercises": [
-        {
-          "id": "",
-          "name": "Incline",
-          "reps": "8"
-        }
-      ],
-      "userId": "f0b8"
-    },
-    {
-      "id": "90f0",
-      "name": "Pushups",
-      "description": "Push-ups are a basic exercise used in civilian athletic training.",
-      "exercises": [
-        {
-          "id": "",
-          "name": "Wide pushups",
-          "reps": "3"
-        }
-      ],
+      "id": "b9a7",
+      "name": "Chest Press",
+      "description": "The chest press is a classic upper-body strengthening exercise ",
+      "reps": "10",
       "userId": "f0b8"
     },
     {
       "id": "b9a7",
       "name": "Chest Press",
       "description": "The chest press is a classic upper-body strengthening exercise ",
-      "exercises": [
-        {
-          "id": "",
-          "name": "Cable chest press",
-          "reps": "10"
-        }
-      ],
+      "reps": "10",
+      "userId": "f0b8"
+    },
+    {
+      "id": "b9a7",
+      "name": "Chest Press",
+      "description": "The chest press is a classic upper-body strengthening exercise ",
+      "reps": "10",
       "userId": "f0b8"
     },
     {
       "id": "0154",
       "name": "Squat",
       "description": "Squats burn calories and might help you lose weight",
-      "exercises": [
-        {
-          "id": "",
-          "name": "Classic squat",
-          "reps": "3"
-        }
-      ],
+      "reps": "3",
       "userId": "f0b8"
+    },
+    {
+      "id": "c75f",
+      "name": "Squat",
+      "description": "Demo",
+      "reps": "10",
+      "userId": "049b"
     }
   ],
   "admins": [
     {
       "id": "ad1",
-      "username": "Admin2",
-      "email": "admin2@gmail.com",
-      "password": "Admin2@gym"
+      "username": "Admin1",
+      "email": "admin@gmail.com",
+      "password": "admin1@gym"
     },
     {
       "id": "ad2",
-      "username": "Admin3",
-      "email": "admin3@gmail.com",
+      "username": "Admin2",
+      "email": "admin2@gmail.com",
       "password": "Admin3@gym"
-    },
-    {
-      "id": "ad3",
-      "username": "Admin4",
-      "email": "admin4@gmail.com",
-      "password": "Admin4@gym"
-    },
-    {
-      "id": "ad4",
-      "username": "Admin5",
-      "email": "admin5@gmail.com",
-      "password": "Admin5@gym"
-    },
-    {
-      "id": "ad5",
-      "username": "Admin1",
-      "email": "admin1@gmail.com",
-      "password": "Admin1@gym"
     }
   ],
   "demovideodata": [
@@ -183,6 +130,34 @@
       "title": "DB Cross Body Clean",
       "description": "It recruits all of your major muscle groups for a head-to-toe pump",
       "src": "https://www.youtube.com/embed/2t4OL7E-vmI?si=6mjrWLjlLEOiAzr7"
+    }
+  ],
+  "trainers": [
+    {
+      "id": "fb74",
+      "name": "demotrainer",
+      "email": "demotrainer@gmail.com",
+      "password": "demo1234"
+    }
+  ],
+  "goals": [
+    {
+      "id": 1,
+      "userId": "f0b8",
+      "type": "short-term",
+      "description": "Running",
+      "target": "10",
+      "reminder": "Daily",
+      "completed": true
+    },
+    {
+      "id": 1,
+      "userId": "049b",
+      "type": "long-term",
+      "description": "Swimming",
+      "target": "2",
+      "reminder": "Weekly",
+      "completed": true
     }
   ]
 }

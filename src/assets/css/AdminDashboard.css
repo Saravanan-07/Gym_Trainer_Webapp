@@ -1,0 +1,79 @@
+/* Main container */
+.admin-dashboard {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    color: black
+  }
+  
+  /* Section headers */
+  .admin-dashboard h1, .admin-dashboard h2 {
+    text-align: center;
+    color: #333;
+  }
+  
+  /* List styles */
+  .admin-dashboard ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .admin-dashboard li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .admin-dashboard li button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .admin-dashboard li button:hover {
+    background-color: #c0392b;
+  }
+  
+  /* Form styles */
+  .admin-dashboard form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+  }
+  
+  .admin-dashboard form input {
+    width: 100%;
+    max-width: 400px;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    box-sizing: border-box;
+  }
+  
+  .admin-dashboard form button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+  }
+  
+  .admin-dashboard form button:hover {
+    background-color: #2980b9;
+  }
+  

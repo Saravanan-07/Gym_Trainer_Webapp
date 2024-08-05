@@ -11,7 +11,7 @@ const Workouts = () => {
   const [newWorkout, setNewWorkout] = useState({
     name: '',
     description: '',
-    exercises: [{ id: '', name: '', reps: '' }],
+    reps: '',  // Updated to handle reps directly
     userId: user?.id || ''
   });
 
@@ -42,13 +42,6 @@ const Workouts = () => {
     }));
   };
 
-  const handleExerciseChange = (index, e) => {
-    const { name, value } = e.target;
-    const exercises = [...newWorkout.exercises];
-    exercises[index] = { ...exercises[index], [name]: value };
-    setNewWorkout({ ...newWorkout, exercises });
-  };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -59,7 +52,7 @@ const Workouts = () => {
       setNewWorkout({
         name: '',
         description: '',
-        exercises: [{ id: '', name: '', reps: '' }],
+        reps: '',  // Reset reps field
         userId: user?.id || ''
       });
     } catch (error) {
@@ -98,13 +91,7 @@ const Workouts = () => {
               <div key={workout.id} className="workout-item">
                 <h3>{workout.name}</h3>
                 <p>{workout.description}</p>
-                <ul>
-                  {workout.exercises.map((exercise) => (
-                    <li key={exercise.id || exercise.name}>
-                      {exercise.name} - {exercise.reps} reps
-                    </li>
-                  ))}
-                </ul>
+                <p>Reps: {workout.reps}</p> {/* Display reps directly */}
                 <button onClick={() => handleDelete(workout.id)}>Delete</button>
               </div>
             ))}
@@ -135,26 +122,16 @@ const Workouts = () => {
                   required
                 ></textarea>
               </div>
-              {newWorkout.exercises.map((exercise, index) => (
-                <div key={index} className="exercise-item">
-                  <input
-                    type="text"
-                    name="name"
-                    placeholder="Exercise Name"
-                    value={exercise.name}
-                    onChange={(e) => handleExerciseChange(index, e)}
-                    required
-                  />
-                  <input
-                    type="number"
-                    name="reps"
-                    placeholder="Reps"
-                    value={exercise.reps}
-                    onChange={(e) => handleExerciseChange(index, e)}
-                    required
-                  />
-                </div>
-              ))}
+              <div>
+                <input
+                  type="number"
+                  name="reps"
+                  placeholder="Reps"
+                  value={newWorkout.reps}
+                  onChange={handleWorkoutChange}
+                  required
+                />
+              </div>
               <button type="submit">Add Workout</button>
             </form>
           </div>
@@ -176,4 +153,3 @@ const Workouts = () => {
 };
 
 export default Workouts;
-

@@ -1,555 +1,276 @@
-/* /* :root {
-    --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
-    --primary: 240 5.9% 10%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 45%;
-    --accent: 240 4.8% 95.9%;
-    --accent-foreground: 240 5.9% 10%;
-    --destructive: 0 72% 51%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 240 5.9% 10%;
-    --radius: 0.5rem;
-  }
-  
-  * {
-    border-color: var(--border);
-  }
-  
-  body {
-    background-color: hsl(var(--background));
-    color: hsl(var(--foreground));
-    font-family: var(--font-body);
-  }
-  
-  h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-heading);
-  }
-  
-  .card {
-    background-color: hsl(var(--card));
-    color: hsl(var(--card-foreground));
-    border-radius: var(--radius);
-    box-shadow: var(--card-shadow);
-  }
-  
-  .card-header {
-    padding: 1rem;
-  }
-  
-  .card-title {
-    margin: 0;
-    font-size: 1.25rem;
-    font-weight: bold;
-  }
-  
-  .card-description {
-    margin: 0.5rem 0 0;
-    color: hsl(var(--muted-foreground));
-  }
-  
-  .card-content {
-    padding: 1rem;
-  }
-  
-  .card-footer {
-    padding: 1rem;
-    border-top: 1px solid var(--border);
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: 500;
-  }
-  
-  input, textarea {
-    width: 100%;
-    padding: 0.5rem;
-    border-radius: var(--radius);
-    border: 1px solid var(--input);
-    background-color: var(--background);
-    color: var(--foreground);
-  }
-  
-  input[type="date"] {
-    padding-right: 1rem;
-  }
-  
-  button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.5rem 1rem;
-    border-radius: var(--radius);
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.2s;
-  }
-  
-  button[type="submit"] {
-    background-color: hsl(var(--primary));
-    color: hsl(var(--primary-foreground));
-  }
-  
-  button:hover {
-    background-color: hsl(var(--primary) / 0.9);
-  }
-  
-  button:focus-visible {
-    outline: none;
-    box-shadow: 0 0 0 2px hsl(var(--ring));
-  }
-  
-  button[variant="ghost"] {
-    background-color: transparent;
-    color: hsl(var(--foreground));
-  }
-  
-  button[size="icon"] {
-    padding: 0.25rem;
-  }
-  
-  .progress {
-    appearance: none;
-    width: 100%;
-    height: 1rem;
-    border-radius: var(--radius);
-    background-color: var(--input);
-  }
-  
-  progress::-webkit-progress-bar {
-    background-color: hsl(var(--input));
-  }
-  
-  progress::-webkit-progress-value {
-    background-color: hsl(var(--primary));
-  }
-   
+/* 
+
+.bbody {
+  background-color: #fff;
+  color: #000;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.goal-setting-container {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.goal-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.goal-form input,
+.goal-form select,
+.goal-form textarea {
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.goal-form button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.goal-form button:enabled {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.goal-form button:enabled:hover {
+  background-color: #555;
+}
+
+.goal-list {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.goal-item {
+  padding: 20px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  width: 100%;
+  max-width: 500px;
+}
+
+.goal-item h3 {
+  margin: 0 0 10px;
+}
+
+.goal-item p {
+  margin: 5px 0;
+}
+
+.reminder {
+  margin-top: 10px;
+  color: #ff0000;
+}
+
+.goal-item button {
+  padding: 5px 10px;
+  font-size: 14px;
+  background-color: #f00;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.goal-item button:hover {
+  background-color: #c00;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tabs button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 1px solid #000;
+  background-color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.tabs button:hover {
+  background-color: #eee;
+}
+
+.tabs button.active {
+  background-color: #000;
+  color: #fff;
+} */
 
 
+.bbody {
+  background-color: #fff;
+  color: #000;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
 
-   :root {
-    --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
-    --primary: 0 0% 10%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 45%;
-    --accent: 240 4.8% 95.9%;
-    --accent-foreground: 240 5.9% 10%;
-    --destructive: 0 72% 51%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 240 5.9% 10%;
-    --radius: 0.5rem;
-  }
-  
-  * {
-    border-color: var(--border);
-  }
-  
-  body {
-    background-color: hsl(var(--background));
-    color: hsl(var(--foreground));
-    font-family: var(--font-body);
-  }
-  
-  h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-heading);
-  }
-  
-  .card {
-    background-color: hsl(var(--card));
-    color: hsl(var(--card-foreground));
-    border-radius: var(--radius);
-    box-shadow: var(--card-shadow);
-  }
-  
-  .card-header {
-    padding: 1rem;
-  }
-  
-  .card-title {
-    margin: 0;
-    font-size: 1.25rem;
-    font-weight: bold;
-  }
-  
-  .card-description {
-    margin: 0.5rem 0 0;
-    color: hsl(var(--muted-foreground));
-  }
-  
-  .card-content {
-    padding: 1rem;
-  }
-  
-  .card-footer {
-    padding: 1rem;
-    border-top: 1px solid var(--border);
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: 500;
-  }
-  
-  input, textarea {
-    width: 100%;
-    padding: 0.5rem;
-    border-radius: var(--radius);
-    border: 1px solid var(--input);
-    background-color: var(--background);
-    color: var(--foreground);
-  }
-  
-  input[type="date"] {
-    padding-right: 1rem;
-  }
-  
-  button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.5rem 1rem;
-    border-radius: var(--radius);
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.2s;
-  }
-  
-  button[type="submit"] {
-    background-color: hsl(var(--primary));
-    color: hsl(var(--primary-foreground));
-  }
-  
-  button:hover {
-    background-color: hsl(var(--primary) / 0.9);
-  }
-  
-  button:focus-visible {
-    outline: none;
-    box-shadow: 0 0 0 2px hsl(var(--ring));
-  }
-  
-  button[variant="ghost"] {
-    background-color: transparent;
-    color: hsl(var(--foreground));
-  }
-  
-  button[size="icon"] {
-    padding: 0.25rem;
-  }
-  
-  .progress {
-    appearance: none;
-    width: 100%;
-    height: 1rem;
-    border-radius: var(--radius);
-    background-color: var(--input);
-  }
-  
-  progress::-webkit-progress-bar {
-    background-color: hsl(var(--input));
-  }
-  
-  progress::-webkit-progress-value {
-    background-color: hsl(var(--primary));
-  }
-  
-  Additional styles for Goalsetting component 
-  
-  .bg-primary {
-    background-color: hsl(var(--primary));
-  }
-  
-  .bg-muted {
-    background-color: hsl(var(--muted));
-  }
-  
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .text-primary-foreground {
-    color: hsl(var(--primary-foreground));
-  }
-  
-  .text-muted-foreground {
-    color: hsl(var(--muted-foreground));
-  }
-  
-  .py-12 {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-  }
-  
-  .md\:py-24 {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
-  }
-  
-  .lg\:py-32 {
-    padding-top: 8rem;
-    padding-bottom: 8rem;
-  }
-  
-  .px-4 {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-  
-  .md\:px-6 {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-  
-  .text-center {
-    text-align: center;
-  }
-  
-  .max-w-\[700px\] {
-    max-width: 700px;
-  }
-  
-  .mx-auto {
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .space-y-4 > :not([hidden]) ~ :not([hidden]) {
-    --tw-space-y-reverse: 0;
-    margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
-    margin-bottom: calc(1rem * var(--tw-space-y-reverse));
-  }
-  
-  .space-y-6 > :not([hidden]) ~ :not([hidden]) {
-    --tw-space-y-reverse: 0;
-    margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
-    margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
-  }
-  
-  .grid {
-    display: grid;
-  }
-  
-  .gap-4 {
-    gap: 1rem;
-  }
-  
-  .sm\:grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-  
-  .lg\:grid-cols-3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-  
-  .w-full {
-    width: 100%;
-  }
-  
-  .max-w-2xl {
-    max-width: 42rem;
-  }
-  
-  .text-3xl {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-  }
-  
-  .font-bold {
-    font-weight: 700;
-  }
-  
-  .tracking-tighter {
-    letter-spacing: -0.05em;
-  }
-  
-  .sm\:text-4xl {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
-  }
-  
-  .sm\:text-5xl {
-    font-size: 3rem;
-    line-height: 1;
-  }
-  
-  .md\:text-6xl {
-    font-size: 3.75rem;
-    line-height: 1;
-  }
-  
-  .text-lg {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-  }
-  
-  .md\:text-xl {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-  }
-  
-  .inline-flex {
-    display: inline-flex;
-  }
-  
-  .h-10 {
-    height: 2.5rem;
-  }
-  
-  .items-center {
-    align-items: center;
-  }
-  
-  .justify-center {
-    justify-content: center;
-  }
-  
-  .rounded-md {
-    border-radius: 0.375rem;
-  }
-  
-  .bg-primary-foreground {
-    background-color: hsl(var(--primary-foreground));
-  }
-  
-  .px-8 {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-  
-  .text-sm {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
-  
-  .font-medium {
-    font-weight: 500;
-  }
-  
-  .text-primary {
-    color: hsl(var(--primary));
-  }
-  
-  .shadow {
-    box-shadow: var(--shadow);
-  }
-  
-  .transition-colors {
-    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
-    transition-duration: 150ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  
-  .hover\:bg-primary-foreground\/90:hover {
-    background-color: hsl(var(--primary-foreground) / 0.9);
-  }
-  
-  .focus-visible\:outline-none:focus-visible {
-    outline: 2px solid transparent;
-    outline-offset: 2px;
-  }
-  
-  .focus-visible\:ring-1:focus-visible {
-    box-shadow: 0 0 0 2px hsl(var(--ring));
-  }
-  
-  .disabled\:pointer-events-none:disabled {
-    pointer-events: none;
-  }
-  
-  .disabled\:opacity-50:disabled {
-    opacity: 0.5;
-  }
-  
-  .grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-  
-  .gap-2 {
-    gap: 0.5rem;
-  }
-  
-  .flex {
-    display: flex;
-  }
-  
-  .flex-1 {
-    flex: 1 1 0%;
-  }
-  
-  .flex-col {
-    flex-direction: column;
-  }
-  
-  .flex-row {
-    flex-direction: row;
-  }
-  
-  .min-h-dvh {
-    min-height: 100vh;
-  }
-  
-  .text-muted-foreground {
-    color: hsl(var(--muted-foreground));
-  }
-  
-  .mt-4 {
-    margin-top: 1rem;
-  }
-  
-  .lg\:mt-8 {
-    margin-top: 2rem;
-  }
-  
-  p {
-    margin: 0;
-  }
-  
-  p:not(:last-child) {
-    margin-bottom: 1rem;
-  }
-  
-  /* New styles for better separation and padding 
-  
-  .bg-primary, .bg-muted {
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border-radius: var(--radius);
-  }
-  
-  .text-primary-foreground, .text-muted-foreground {
-    padding: 0.5rem 0;
-    display: block;
-  }
-  
-  .card {
-    margin-bottom: 1rem;
-  }
-  
-  .card-content {
-    border-top: 1px solid var(--border);
-    padding-top: 1rem;
-  }
-   */
+.goal-setting-container {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.goal-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.goal-form input,
+.goal-form select,
+.goal-form textarea {
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.goal-form button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.goal-form button:enabled {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.goal-form button:enabled:hover {
+  background-color: #555;
+}
+
+.goal-list {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.goal-item {
+  padding: 20px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  width: 100%;
+  max-width: 500px;
+}
+
+.goal-item h3 {
+  margin: 0 0 10px;
+}
+
+.goal-item p {
+  margin: 5px 0;
+}
+
+.reminder {
+  margin-top: 10px;
+  color: #ff0000;
+}
+
+.goal-item button {
+  padding: 5px 10px;
+  font-size: 14px;
+  background-color: black;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.goal-item button:hover {
+  background-color: black;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tabs button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 1px solid #000;
+  background-color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.tabs button:hover {
+  background-color: #eee;
+}
+
+.tabs button.active {
+  background-color: #000;
+  color: #fff;
+}
+
+.goal-item button.complete {
+  background-color: #4CAF50;
+  color: #fff;
+  margin-left: 10px;
+}
+
+.goal-item button.complete:hover {
+  background-color: #45a049;
+}

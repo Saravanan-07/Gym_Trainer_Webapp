@@ -69,14 +69,13 @@ const Homepage = () => {
               {user || admin ? (
                 <>
                   {user && <li><Link to='/Profile' id="Link">Profile</Link></li>}
-                  {admin && <li><Link to='/AdminDashboard' id="Link">Add Trainer</Link></li>}
+                  {admin && <li><Link to='/AdminDashboard' id="Link">Admin Dashboard</Link></li>}
                   <li><Link id="Link" onClick={handleLogoutClick}>Logout</Link></li>
                 </>
               ) : (
                 <>
                   <li><Link to='/login' id="Link" className='login_btn'>Login</Link></li>
                   <li><Link to='/register' id="Link" className='signup_btn'>Sign Up</Link></li>
-                  <li><Link to='/gymlocator' id="Link" className='gymloc'>Find gym near me</Link></li>
                 </>
               )}
             </ul>
@@ -151,7 +150,7 @@ const Homepage = () => {
                   <p>Get personalized guidance and support from our team of experienced fitness experts.</p>
                 </div>
               </div>
-              <div className=".box2insidebox1" onClick={() => { navigate('/schedule') }}>
+              <div className=".box2insidebox1" onClick={() => { navigate('/goals') }}>
                 <div className="innerboxx">
                   <div className="logobox">
                   </div>
@@ -170,14 +169,6 @@ const Homepage = () => {
             </div>
           </div>
         </div>
-
-        <div className="contentbox abtclass">
-          <div id="abt">
-            <div className="abtimg"></div>
-            <div className="abtimgcont"></div>
-          </div>
-        </div>
-
         <div className="contentbox">
           <div className="logcontent">
             <div className="logs">
