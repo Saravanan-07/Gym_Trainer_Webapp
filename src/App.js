@@ -10,7 +10,7 @@ import VirtualTrainer from './components/others/VirtualTrainer';
 import Goalsetting from './components/others/Goalsetting';
 import Wpcardio from './components/Workoutplanss/Wpcardio';
 import AdminDashboard from './components/AdminDashboard';
-
+import Community from './components/others/Community';
 
 function App() {
   return (
@@ -26,6 +26,7 @@ function App() {
         <Route path='/nutrients' element={<Dietfoods/>}></Route>
         <Route path='/virtualtrainer' element={<VirtualTrainer/>}></Route>
         <Route path='/goals' element={<Goalsetting/>}></Route>
+        <Route path='/community' element={<Community/>}></Route>
         <Route path='/AdminDashboard' element={<AdminDashboard></AdminDashboard>}></Route>
       </Routes>
    </div>

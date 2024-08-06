@@ -72,12 +72,6 @@
   ],
   "demovideodata": [
     {
-      "id": "974b",
-      "title": "Half Kneeling",
-      "description": "Half kneeling kettlebell chop",
-      "src": "https://www.youtube.com/embed/Psmkt_Tft5E?si=BjGvDyCfsKLgzjq6"
-    },
-    {
       "id": "806e",
       "title": "Banded Chop",
       "description": "A variety of muscles are working during this exercise",
@@ -147,15 +141,6 @@
     }
   ],
   "goals": [
-    {
-      "id": "1",
-      "userId": "f0b8",
-      "type": "short-term",
-      "description": "Running",
-      "target": "10",
-      "reminder": "Daily",
-      "completed": true
-    },
     {
       "id": "1",
       "userId": "049b",
