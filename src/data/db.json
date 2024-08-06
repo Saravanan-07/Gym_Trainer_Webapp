@@ -120,12 +120,6 @@
       "src": "https://www.youtube.com/embed/3rtUK_jUv4s?si=dkYgziHUMMMoT1Ki"
     },
     {
-      "id": "07d4",
-      "title": "KB Cross Body Clean",
-      "description": "The kettlebell clean activates muscle groups throughout your entire body",
-      "src": "https://www.youtube.com/embed/ibmb3louDAk?si=s3Dt2gk3kFtlvp3k"
-    },
-    {
       "id": "b811",
       "title": "DB Cross Body Clean",
       "description": "It recruits all of your major muscle groups for a head-to-toe pump",
@@ -148,6 +142,15 @@
       "description": "Swimming",
       "target": "2",
       "reminder": "Weekly",
+      "completed": true
+    },
+    {
+      "id": 1,
+      "userId": "049b",
+      "type": "long-term",
+      "description": "czXZsdfa",
+      "target": "5",
+      "reminder": "daily",
       "completed": true
     }
   ]
