@@ -11,11 +11,22 @@ const Goals = () => {
   const [target, setTarget] = useState('');
   const [reminder, setReminder] = useState('');
   const [activeTab, setActiveTab] = useState('in-progress');
+  const [completedGoals, setCompletedGoals] = useState([]);
 
   useEffect(() => {
-    const storedGoals = JSON.parse(localStorage.getItem('goals')) || [];
-    setGoals(storedGoals);
-  }, []);
+    if (!user) {
+      return;
+    }
+
+    if (user.role === 'admin') {
+      // If the user is an admin, show the message to sign in as a user
+      return <div>Sign in as user</div>;
+    } else {
+      // Load goals from local storage
+      const storedGoals = JSON.parse(localStorage.getItem('goals')) || [];
+      setGoals(storedGoals);
+    }
+  }, [user]);
 
   const saveGoals = (goals) => {
     localStorage.setItem('goals', JSON.stringify(goals));
@@ -59,8 +70,6 @@ const Goals = () => {
     }
   };
   
-  
-
   const completeGoal = async (id) => {
     const goalToComplete = goals.find(goal => goal.id === id);
     if (goalToComplete) {
@@ -74,19 +83,28 @@ const Goals = () => {
 
   const userGoals = goals.filter(goal => goal.userId === user.id);
   const inProgressGoals = userGoals.filter(goal => !goal.completed);
-  const [completedGoals, setCompletedGoals] = useState([]);
 
   useEffect(() => {
-    const fetchCompletedGoals = async () => {
-      const response = await axios.get('http://localhost:5001/goals');
-      const userCompletedGoals = response.data.filter(goal => goal.userId === user.id);
-      setCompletedGoals(userCompletedGoals);
-    };
-
-    if (activeTab === 'completed') {
-      fetchCompletedGoals();
+    if (!user) {
+      return;
     }
-  }, [activeTab, user.id]);
+
+    if (user.role !== 'admin') {
+      const fetchCompletedGoals = async () => {
+        const response = await axios.get('http://localhost:5001/goals');
+        const userCompletedGoals = response.data.filter(goal => goal.userId === user.id);
+        setCompletedGoals(userCompletedGoals);
+      };
+
+      if (activeTab === 'completed') {
+        fetchCompletedGoals();
+      }
+    }
+  }, [activeTab, user]);
+
+  if (!user) {
+    return <div id='errorheading'>Sign in as user</div>;
+  }
 
   return (
     <div className='bbody'>
