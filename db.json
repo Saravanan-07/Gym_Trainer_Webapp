@@ -11,6 +11,12 @@
       "username": "Saravanan",
       "email": "saravanan@gmail.com",
       "password": "Sarav@234"
+    },
+    {
+      "id": "837e",
+      "username": "demo2",
+      "email": "demo2@gmail.com",
+      "password": "demo12345678"
     }
   ],
   "workouts": [
@@ -142,7 +148,7 @@
   ],
   "goals": [
     {
-      "id": 1,
+      "id": "1",
       "userId": "f0b8",
       "type": "short-term",
       "description": "Running",
@@ -151,7 +157,7 @@
       "completed": true
     },
     {
-      "id": 1,
+      "id": "1",
       "userId": "049b",
       "type": "long-term",
       "description": "Swimming",
