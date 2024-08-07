@@ -103,7 +103,6 @@ const Homepage = () => {
             </div>
           </div>
 
-          
 
         <div className="contentbox dummy">
           <div className="dummyimg">
@@ -169,6 +168,14 @@ const Homepage = () => {
             </div>
           </div>
         </div>
+          <div id="abt">
+              <div className="abtclass">
+                <div className="abtimg">
+                </div>
+              </div>
+                <div className="abtimgcont">
+                </div>
+          </div>
         <div className="contentbox">
           <div className="logcontent">
             <div className="logs">
