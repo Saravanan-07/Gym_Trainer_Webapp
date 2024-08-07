@@ -96,7 +96,7 @@ button:hover{
 .boxinsidecb{
     height: 380px;
     width: 80%;
- 
+    /**/
     display: flex;
     flex-wrap: wrap;
 }
