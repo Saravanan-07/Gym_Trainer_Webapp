@@ -48,7 +48,7 @@ const Homepage = () => {
   };
 
   return (
-    <div>
+    <div id="outermost">
       {showLogoutPopup && (
         <div className="popup-overlay">
           <div className="popup-content">
