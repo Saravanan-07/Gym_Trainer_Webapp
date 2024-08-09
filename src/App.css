@@ -7,11 +7,9 @@
   margin: 0;
   padding: 0;
   font-size: 1.4em;
-  color: white;
-  border-collapse: inherit;
-  
+  border-collapse: inherit;  
 }
 #Link{
   text-decoration: none;
-  color: rgb(255, 255, 255);
+  color: white;
 }

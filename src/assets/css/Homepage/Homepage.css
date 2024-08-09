@@ -1,13 +1,15 @@
 *{
     scroll-behavior: smooth;
 }
+
 .header-main{
     height: 90px;
+    color: white;
     border-bottom:0.1px solid #E7E7E4;
     background-color: black;
 }
 .header-list{
-    position: relative;
+    position:sticky;
     right: 10px;
 }
 .header-list ul{
@@ -21,13 +23,14 @@
     padding-right: 20px;
 }
 .header-list li:hover{
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 button:hover{
-    transform: scale(1.1);
-}
+    transform: scale(1.2);
+} 
 
-.contentbox{
+
+.contentboxxxx{
     position: relative;
     justify-content: center;
     height:fit-content;
@@ -40,15 +43,6 @@ button:hover{
 .wwe{
     align-items: center;
     height: 90.2vh;
-}
-.contentbox-one-1{
-    padding-left: 100px;
-    width: 50%;
-    height: 600px;
-    display: inline-block;
-    justify-content: center;
-    align-items: center;
-
 }
 .contextbox-one-1-img{
     margin-top: 25px;
@@ -65,10 +59,13 @@ button:hover{
     border-radius: 3px;
     color: white;
     padding: 7px;
+    cursor: pointer;
+    margin-top: 10%;
 }
 .dummy{
     background-color: white;
 }
+
 .wht-button{
     margin-right: 20px;
     background-color: rgb(255, 255, 255);
@@ -76,6 +73,8 @@ button:hover{
     border-radius: 3px;
     color: rgb(0, 0, 0);
     padding: 7px;
+    cursor: pointer;
+    margin-top: 10%;
 }
 .login_and_signup{
     width: 100%;
@@ -153,6 +152,7 @@ button:hover{
     justify-content: center;
     align-items: center;
     border: 1px solid hsla(240, 6%, 20%, 1);
+    border-radius: 20px;
 }
 .bb1 .logobox{
     height: 60px;
@@ -172,9 +172,17 @@ button:hover{
     border-radius: 5px;
 }
 .imginsidedummy{
-    background-image: url('../../images/Homepage/dummyimg.jpg');
+    background-image: url('../../images/Homepage/dummmyyy.jpeg');
     height: 300px;
-    width: 600px;
+    width: 1000px;
+    margin-right: 50px;
+    border-radius: 5px;
+    background-size: cover;
+}
+.imginsidedummy2{
+    background-image: url('../../images/Homepage/dummyyy2.jpeg');
+    height: 300px;
+    width: 1000px;
     margin-right: 50px;
     border-radius: 5px;
     background-size: cover;
@@ -250,13 +258,12 @@ button:hover{
 }
 
 
-
+/* 
 #cont
 {
     font-family: 'Bebas Neue',sans-serif;
     height: 800px;
     display: flex;
-    
 }
 .contclass{
     display: block;
@@ -275,7 +282,7 @@ button:hover{
 }
 .contimg
 {
-    background-image: url('../../images/Homepage/contimg.png');
+    background-image: url(../images/homepage/contimg.png);
     background-size: cover;
     width: 50%;
     
@@ -298,6 +305,7 @@ button:hover{
     height: 500px;
     width: 60%;
     border-radius: 10px;
+   
 }
 .continp
 {
@@ -334,7 +342,7 @@ button:hover{
     cursor: pointer;
     margin-left: 45px;
 }
-
+ */
 
 
 .homepage-content {
@@ -384,4 +392,315 @@ button:hover{
     background-color: #dc3545;
     color: white;
   }
+   
+.contentbox-one-1 {
+    border-radius: 10px;
+    width: 50%;
+    height: 600px;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+}
+
+.contentbox-one-11 {
+    padding-top: 10%;
+    border-radius: 10px;
+    width: 50%;
+    height: 600px;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    height: 610px;
+}
+
+.contentbox {
+    position: relative;
+    justify-content: center;
+    height: fit-content;
+    background-color: rgb(0, 0, 0);
+    border-bottom: 0.1px solid rgba(128, 128, 128, 0.427);
+    display: flex;
+    margin: 0 auto; 
+    max-width: 100%; 
+    overflow: hidden; 
+}
+.contentboxm {
+    position: relative;
+    justify-content: center;
+    height: 750px;
+    background-color: rgb(0, 0, 0);
+    border-bottom: 0.1px solid rgba(128, 128, 128, 0.427);
+    display: flex;
+    margin: 0 auto; 
+    max-width: 100%; 
+    overflow: hidden; 
+}
+.maincls {
+    margin-top: 200px;
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    height: 100vh;
+}
+.gobackwork {
+    background-color: #000;
+    color: #fff;
+    height: 70px;
+    padding-top: 30px;
+}
+.bdy {
+    background-color: #1e1f21;
+    color: #fff;
+    margin-top: 100px;
+    border-radius: 30px;
+}
+.wrapperr {
+    padding: 10px 50px;
+    margin-top: 50px;
+    border-radius: 20px;
+    margin-right: 50px;
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto; 
+    max-width: 100%; 
+}
+.cardarea {
+    padding: 10px 0;
+    width: 100%;
+    border-radius: 20px;
+}
+.boxxx {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
+    height: 50vh;
+    flex: 0 0 300px; 
+    margin-right: 25px;
+}
+.boxxarea {
+    display: flex;
+    flex-wrap: nowrap;
+}
+.boxxximg {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+.overlayyy {
+    height: 0;
+    width: 100%;
+    background: linear-gradient(transparent,#1c1c1c 58%);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s, padding 0.5s;
+}
+.overlayyhh {
+    font-weight: 500;
+    margin-bottom: 5px;
+    margin-top: 80%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 30px;
+    letter-spacing: 2px;
+    text-align: center;
+}
+.overlayybtt{
+    margin-top: 10px;
+    color: #262626;
+    text-decoration: none;
+    font-size: 14px;
+    background: #fff;
+    border-radius: 50px;
+    text-align: center;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+.boxxx:hover img {
+    transform: scale(1.2);
+}
+.boxxx:hover .overlayyy {
+    height: 100%;
+    padding-left: 20px; 
+    padding-right: 20px;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.coontainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.navbar-listt {
+    list-style: none; 
+    padding: 0; 
+    margin-left: 400px; 
+    display: flex; 
+    flex-direction: row;
+  }
+
+
+
+.feaatures {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: white;
+    padding: 20px;
+    gap: 20px;
+}
+
+.feaature {
+    flex: 1 1 300px;
+    max-width: 300px;
+    text-align: center;
+    padding: 20px;
+    min-width: 315px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feaature:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.icoon img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+.feeh3 {
+    margin: 20px 0 10px;
+    font-size: 1.2em;
+    color: #000;
+}
+
+.feep {
+    margin: 0;
+    color: #666;
+}
+
+
+
+
+.intro {
+    text-align: center;
+    padding: 50px 20px;
+    background-color:white;
+    color: black;
+}
+
+.intro h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.intro p {
+    font-size: 1.2em;
+    margin: 0 auto;
+    max-width: 800px;
+    line-height: 1.6;
+}
+
+   .bboody {
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
   
+  .contact-form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .contact-form-title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #000;
+  }
+  
+  .contact-form-subtitle {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #555;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    color: #000;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  .form-group textarea {
+    resize: vertical;
+    height: 150px;
+  }
+  
+  .contact-form-submit {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact-form-submit:hover {
+    background-color: #444;
+  }

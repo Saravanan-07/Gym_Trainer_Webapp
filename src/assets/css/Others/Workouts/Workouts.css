@@ -1,7 +1,7 @@
 .personalized-workouts {
   font-family: 'Bebas Neue',sans-serif;
   padding: 20px;
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
 }
 .personalized-workouts h2{
   font-family: 'Manrope',sans-serif;
@@ -18,7 +18,7 @@
 .workout-item {
   min-width: 300px;
   flex: 0 0 auto;
-  background-color: #f9f9f9;
+  background-color: #75323253;
   padding: 15px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -44,8 +44,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #ffffff;
+  background-color: rgba(64, 60, 60, 0.826);
   height: 600px;
+  width: 100%;
 }
 .add-workout-form {
   display: flex;
@@ -53,7 +54,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #000000;
+  background-color: #ffffff;
   border-radius: 10px;
   padding: 20px;
   margin-top: 10px;
@@ -61,7 +62,7 @@
 }
 
 .add-workout-form h3 {
-  color: #ffffff;
+  color: #000000;
   margin-bottom: 20px;
   font-size: 1.5em;
 }
@@ -95,19 +96,19 @@
   border-radius: 8px;
   font-size: 1em;
   cursor: pointer;
-  background-color: #000000;
+  background-color: #1e96fc;
   color: white;
   margin-top: 10px;
   transition: 3s;
 }
 
 .add-workout-form button[type="button"] {
-  background-color: #6c757d;
+  background-color: #1e96fc;
 }
 
 
 .add-workout-form button[type="button"]:hover {
-  background-color: #5a6268;
+  background-color: #1e96fc;
 }
 
 .loading{
