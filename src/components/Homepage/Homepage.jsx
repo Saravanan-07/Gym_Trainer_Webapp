@@ -1,5 +1,17 @@
 import React, { useState } from 'react';
 import '../../assets/css/Homepage/Homepage.css';
+import imgpw from '../assets/images/homepage/personalisedworkouts.jpg'
+import imged from '../assets/images/homepage/Exercisedemos.png'
+import imgnd from '../assets/images/homepage/Nutritionanddiet.jpeg'
+import imgvt from '../assets/images/homepage/virtualtrainer.png'
+import imgpg from '../assets/images/homepage/personalgoals.jpeg'
+import imgcc from '../assets/images/homepage/commmmunity.jpeg'
+import pabtg1 from '../assets/images/homepage/scheduleabt.jpeg'
+import pabtg2 from '../assets/images/homepage/videoai.jpeg'
+import pabtg3 from '../assets/images/homepage/Nutritionanddiet.jpeg'
+import pabtg4 from '../assets/images/homepage/vtaiii.jpeg'
+import pabtg5 from '../assets/images/homepage/pgoals.png'
+import pabtg6 from '../assets/images/homepage/commuai.jpeg'
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
@@ -13,7 +25,7 @@ const Homepage = () => {
     event.preventDefault();
     const formData = new FormData(event.target);
 
-    formData.append("access_key", "3143c6a1-b8fd-4762-b4de-e5b7c6d2149e");
+    formData.append("access_key", "98a4795c-7c31-42ea-8431-326bd737761b");
 
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
@@ -40,7 +52,7 @@ const Homepage = () => {
   const handleConfirmLogout = () => {
     logout();
     setShowLogoutPopup(false);
-    navigate('/login');
+    navigate('/');
   };
 
   const handleCancelLogout = () => {
@@ -48,7 +60,7 @@ const Homepage = () => {
   };
 
   return (
-    <div id="outermost">
+    <div>
       {showLogoutPopup && (
         <div className="popup-overlay">
           <div className="popup-content">
@@ -59,17 +71,18 @@ const Homepage = () => {
           </div>
         </div>
       )}
-
+      
       <div className={`homepage-content ${showLogoutPopup ? 'blurred' : ''}`}>
         <div className="header-main">
-          <div className="header-list">
-            <ul>
-              <li><a href='#abt' id="Link">About</a></li>
+           <div className="header-list">
+            <div className='navbarrrrr'><ul>
+              <li><a href='#aboutpage' id="Link">About</a></li>
               <li><a href='#cont' id="Link">Contact</a></li>
+              <li><a href='#serv' id="Link">Services</a></li>
               {user || admin ? (
                 <>
-                  {user && <li><Link to='/Profile' id="Link">Profile</Link></li>}
                   {admin && <li><Link to='/AdminDashboard' id="Link">Admin Dashboard</Link></li>}
+                  {user && <li><Link to='/Profile' id="Link">Profile</Link></li>}
                   <li><Link id="Link" onClick={handleLogoutClick}>Logout</Link></li>
                 </>
               ) : (
@@ -79,181 +92,185 @@ const Homepage = () => {
                 </>
               )}
             </ul>
-          </div>
+            </div>
+          </div> 
+           
           <div className="contentbox wwe">
-            <div className="contentbox-one-1">
+            <div className="contentbox-one-11">
               <h1>Take Control of Your <br /> Fitness Journey</h1>
-              <p>Gym Trainer is your personal fitness companion, helping you
-                achieve your goals through personalized workout plans, real-time
-                progress tracking, and expert guidance.</p>
+              <p>FitTrack is your personal fitness companion, helping you
+                achieve your goals through personalized workout plans, Setting personal goals,
+                Nutrition and diet plans, and expert guidance.</p>
               {user || admin ? (
                 <>
                   <h3>Welcome, {user ? user.username : admin.username}</h3>
                 </>
               ) : (
                 <div className='login_and_signup'>
-                  <button className='blk-button top-btn' onClick={() => { navigate('/register') }}>Sign Up</button>
+                  <button className='blk-button top-btn' onClick={() => { navigate('/register') }}>Join</button>
                   <button className='wht-button top-btn' onClick={() => { navigate('/login') }}>Login</button>
                 </div>
               )}
             </div>
-            <div className="contentbox-one-1">
-              <div className="contextbox-one-1-img">
-              </div>
-            </div>
           </div>
 
-
-        <div className="contentbox dummy">
+        <div className="contentboxxxx dummy">
           <div className="dummyimg">
             <div className="imginsidedummy"></div>
-            <h1>YOU VS THE YEAR 2024<br />Log 1,024 km in 2024</h1>
+            <h1>Your mind is your strongest muscle.</h1>     
           </div>
         </div>
 
-        <div className="contentbox">
-          <div className="contentbox-one-1 box2">
-            <h1>Unlock Your Fitness Potential</h1>
-            <h6>Gym Trainer offers a comprehensive suite of features to help you reach your fitness goals, whether you're a beginner or an experienced athlete.</h6>
-            <div className="boxinsidecb">
-              <div className=".box2insidebox1" onClick={() => { navigate('/workouts') }}>
-                <div className="innerboxx">
-                  <div className="logobox">
-                    
-                  </div>
-                  <h3>Personalized Workouts</h3>
-                  <p>Receive custom workout plans tailored to your fitness level and goals.</p>
+<div className="contentboxm">
+    <div className="contentbox-one-1 box2" id='serv'>
+        <h1>Unlock Your Fitness Potential</h1>
+          <div className="maincls">
+            <div className="bdy">
+                <div className="cardarea">
+                    <div className="wrapperr">
+                        <div className="boxxarea">
+                            <div className="boxxx">
+                                <img src={imgpw} alt="" className='boxxximg' style={{height:'380px',width:'400px'}}/>
+                                <div className="overlayyy">
+                                    <h3 className='overlayyhh'>Personalized Workouts</h3>
+                                    <button onClick={() => { navigate('/workouts') }} className='overlayybtt'>View</button>
+                                </div>
+                            </div>
+                            <div className="boxxx">
+                                <img src={imged} alt="" className='boxxximg' style={{height:'380px',width:'400px'}}/>
+                                <div className="overlayyy">
+                                    <h3 className='overlayyhh'>Exercise Demos</h3>
+                                    <button onClick={() => { navigate('/demos') }} className='overlayybtt'>View</button>
+                                </div>
+                            </div>
+                            <div className="boxxx">
+                                <img src={imgnd} alt="" className='boxxximg' style={{height:'380px',width:'400px'}}/>
+                                <div className="overlayyy">
+                                    <h3 className='overlayyhh'>Nutrition and diet</h3>
+                                    <button onClick={() => { navigate('/nutrients') }} className='overlayybtt'>View</button>
+                                </div>
+                            </div>
+                            <div className="boxxx">
+                                <img src={imgvt} alt="" className='boxxximg' style={{height:'380px',width:'400px'}}/>
+                                <div className="overlayyy">
+                                    <h3 className='overlayyhh'>Virtual Trainer</h3>
+                                    <button onClick={() => { navigate('/virtualtrainer') }} className='overlayybtt'>View</button>
+                                </div>
+                            </div>
+                            <div className="boxxx">
+                                <img src={imgpg} alt="" className='boxxximg' style={{height:'380px',width:'400px'}}/>
+                                <div className="overlayyy">
+                                    <h3 className='overlayyhh'>Goal Setting</h3>
+                                    <button onClick={() => { navigate('/schedule') }} className='overlayybtt'>View</button>
+                                </div>
+                            </div>
+                            <div className="boxxx">
+                                <img src={imgcc} alt="" className='boxxximg' style={{height:'380px',width:'400px'}}/>
+                                <div className="overlayyy">
+                                    <h3 className='overlayyhh'>Community</h3>
+                                    <button onClick={() => { navigate('/community') }} className='overlayybtt'>View</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <div className=".box2insidebox1" onClick={() => { navigate('/demos') }}>
-                <div className="innerboxx">
-                  <div className="logobox">
-                  </div>
-                  <h3>Exercise Demos</h3>
-                  <p>Learn proper form and technique with our extensive library of exercise demonstrations</p>
-                </div>
-              </div>
-              <div className=".box2insidebox1" onClick={() => { navigate('/nutrients') }}>
-                <div className="innerboxx">
-                  <div className="logobox">
-                  </div>
-                  <h3>Nutrition and Diet</h3>
-                  <p>Offers basic dietary advice to complement fitness routines. </p>
-                </div>
-              </div>
-              <div className=".box2insidebox1" onClick={() => { navigate('/virtualtrainer') }}>
-                <div className="innerboxx">
-                  <div className="logobox">
-                  </div>
-                  <h3>Virtual Trainer</h3>
-                  <p>Get personalized guidance and support from our team of experienced fitness experts.</p>
-                </div>
-              </div>
-              <div className=".box2insidebox1" onClick={() => { navigate('/goals') }}>
-                <div className="innerboxx">
-                  <div className="logobox">
-                  </div>
-                  <h3>Goal Setting</h3>
-                  <p>Users can set short-term and long-term fitness goals, such as weight targets or muscle mass goals</p>
-                </div>
-              </div>
-              <div className=".box2insidebox1" onClick={() => { navigate('/community') }}>
-                <div className="innerboxx">
-                  <div className="logobox">
-                  </div>
-                  <h3>Challenges<br />& Community</h3>
-                  <p>Join our vibrant community, participate in challenges, and connect with like-minded individuals.</p>
-                </div>
-              </div>
             </div>
-          </div>
         </div>
-          <div id="abt">
-              <div className="abtclass">
-                <div className="abtimg">
-                </div>
-              </div>
-                <div className="abtimgcont">
-                </div>
-          </div>
-        <div className="contentbox">
-          <div className="logcontent">
-            <div className="logs">
-              <h6>MILES LOGGED</h6>
-              <h1>9.42</h1>
-              <h4>Billion</h4>
+    </div> 
+</div>
+
+<section class="intro" id='aboutpage'>
+        <h2>Welcome to Our Fitness Hub</h2>
+        <p>Discover our comprehensive suite of fitness services designed to help you achieve your personal health and wellness goals. From customized workout plans to expert nutritional advice, our platform is dedicated to supporting your fitness journey.</p>
+        <h3>Our services include</h3>
+    </section>
+       
+<section class="feaatures"> 
+        <div class="feaature">
+            <div class="icoon">
+                <img src={pabtg1}  alt="Customised Workout Plans"/>
             </div>
-            <div className="logs">
-              <h6>ROUTES CREATED</h6>
-              <h1>1.85</h1>
-              <h4>Billion</h4>
+            <h3 className='feeh3'>Customised Workout Schedule</h3>
+            <p className='feep'>A customized exercise schedule will take your schedule and your requirements into account and work around those issues.</p>
+        </div>
+        <div class="feaature">
+            <div class="icoon">
+                <img src={pabtg2}  alt="Exercise demos"/>
             </div>
-            <div className="logs">
-              <h6>WORKOUTS LOGGED</h6>
-              <h1>2.44</h1>
-              <h4>Billion</h4>
+            <h3 className='feeh3'>Exercise demos</h3>
+            <p className='feep'> This page provides a series of video tutorials that illustrate different types of workouts for user reference.</p>
+        </div>
+        <div class="feaature">
+            <div class="icoon">
+                <img src={pabtg3}  alt="Nutrition Guidance"/>
             </div>
+            <h3 className='feeh3'>Nutrition Guidance</h3>
+            <p className='feep'>Our experts provide comprehensive nutrition advice to help you fuel your body and achieve your fitness goals.</p>
+        </div>
+        <div class="feaature">
+            <div class="icoon">
+                <img src={pabtg4} alt="Experienced Trainers"/>
+            </div>
+            <h3 className='feeh3'>Experienced Trainers</h3>
+            <p className='feep'>Our team of certified trainers are dedicated to helping you achieve your fitness objectives through personalized guidance and support.</p>
+        </div>
+        <div class="feaature">
+            <div class="icoon">
+                <img src={pabtg5} alt="Set personal goals"/>
+            </div>
+            <h3 className='feeh3'>Set your personal goals</h3>
+            <p className='feep'>Goal setting involves the development of an action plan designed in order to motivate and guide a person or group toward a goal.</p>
+        </div>
+        <div class="feaature">
+            <div class="icoon">
+                <img src={pabtg6} alt="Welcoming Community"/>
+            </div>
+            <h3 className='feeh3'>Welcoming Community</h3>
+            <p className='feep'>Join our vibrant community of fitness enthusiasts and find the motivation and camaraderie you need to push yourself further.</p>
+        </div>
+    </section>
+
+
+
+
+        <div className="contentboxxxx dummy">
+          <div className="dummyimg">
+            <div className="imginsidedummy2"></div>
+            <h1>The secret of getting ahead is getting started.</h1> 
           </div>
         </div>
 
-        <div className="contentbox graybox">
-          <h1>What Our Users Say</h1>
-          <p>Hear from real people who have transformed their lives with Gym Trainer.</p>
-          <div className="grayinner">
-            <div className=".box2insidebox1">
-              <div className="innerbox bb1">
-                <div className="logobox">
-                </div>
-                <h1>"Gym Trainer has been a game-changer for me.
-                  The personalized workouts and progress tracking
-                  have helped me stay motivated and see real results."
-                </h1>
-                <h2>- Sarah, 32</h2>
-              </div>
-            </div>
-            <div className=".box2insidebox1">
-              <div className="innerbox bb1">
-                <div className="logobox">
-                </div>
-                <h1>"I was hesitant to try a fitness app, but Gym
-                  Trainer has exceeded all my expectations.
-                  The virtual trainer feature is incredibly
-                  helpful and keeps me on track."
-                </h1>
-                <h2>- Michael, 45</h2>
-              </div>
-            </div>
-            <div className=".box2insidebox1">
-              <div className="innerbox bb1">
-                <div className="logobox">
-                </div>
-                <h1>"I love the community aspect of Gym Trainer.
-                  The challenges and social features keep me engaged
-                  and motivated to push myself further."
-                </h1>
-                <h2>- Emily, 28</h2>
-              </div>
-            </div>
-          </div>
-          <button className='wht-button cmty-btn' onClick={() => { navigate('/community') }}>Join Community</button>
-        </div>
 
-        <div className="contentbox contclass">
-          <div id='cont'>
-            <div className='contimg'></div>
-            <div className='contdesc'>
-              <form className='contcontainer' onSubmit={onSubmit}>
-                <h3 className='conth3'>CONTACT US</h3>
-                <input type='text' placeholder='Enter your name' className='continp' name='name' required />
-                <input type='text' placeholder='Enter your email' className='continp' name='email' required />
-                <textarea className='continptarea' placeholder='Enter your queries here' name='message' required></textarea>
-                <button className='continpbut' type='submit'>SEND</button>
-              </form>
-            </div>
-          </div>
-        </div>
-          
-          <div className="contentbox footer">
+<div className='bboody' id='cont'>
+<div className="contact-form-container">
+  <h1 className="contact-form-title">Get in Touch</h1>
+  <p className="contact-form-subtitle">
+    Have a question or want to work together? Fill out the form below and we'll get back to you as soon as possible.
+  </p>
+
+<form className="contact-form" onSubmit={onSubmit}>
+  <div className="form-group">
+    <label htmlFor="name" className='lbl'>Name</label>
+    <input type="text" id="name" name="name" placeholder="Enter your name" />
+  </div>
+  <div className="form-group">
+    <label htmlFor="mobile" className='lbl'>Mobile.no</label>
+    <input type="text" id="number" name="mobile" placeholder="Enter your mobile no" />
+  </div>
+  <div className="form-group">
+    <label htmlFor="message" className='lbl'>Message</label>
+    <textarea id="message" name="message" placeholder="Enter your message"></textarea>
+  </div>
+  <button type="submit" className="contact-form-submit">
+    Submit
+  </button>
+</form>
+</div>
+</div>
+
+
+
+          <div className="contentboxxxx footer">
             <ul>
               <li><h1>VEST ARMOUR</h1></li>
               <li>© 2024 Vest Armour®, Inc. All rights reserved</li>
