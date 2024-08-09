@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 import '../../assets/css/Homepage/Homepage.css';
-import imgpw from '../assets/images/homepage/personalisedworkouts.jpg'
-import imged from '../assets/images/homepage/Exercisedemos.png'
-import imgnd from '../assets/images/homepage/Nutritionanddiet.jpeg'
-import imgvt from '../assets/images/homepage/virtualtrainer.png'
-import imgpg from '../assets/images/homepage/personalgoals.jpeg'
-import imgcc from '../assets/images/homepage/commmmunity.jpeg'
-import pabtg1 from '../assets/images/homepage/scheduleabt.jpeg'
-import pabtg2 from '../assets/images/homepage/videoai.jpeg'
-import pabtg3 from '../assets/images/homepage/Nutritionanddiet.jpeg'
-import pabtg4 from '../assets/images/homepage/vtaiii.jpeg'
-import pabtg5 from '../assets/images/homepage/pgoals.png'
-import pabtg6 from '../assets/images/homepage/commuai.jpeg'
+import imgpw from '../../assets/images/Homepage/personalisedworkouts.jpg'
+import imged from '../../assets/images/Homepage/Exercisedemos.png'
+import imgnd from '../../assets/images/Homepage/Nutritionanddiet.jpeg'
+import imgvt from '../../assets/images/Homepage/virtualtrainer.png'
+import imgpg from '../../assets/images/Homepage/personalgoals.jpeg'
+import imgcc from '../../assets/images/Homepage/commmmunity.jpeg'
+import pabtg1 from '../../assets/images/Homepage/scheduleabt.jpeg'
+import pabtg2 from '../../assets/images/Homepage/videoai.jpeg'
+import pabtg3 from '../../assets/images/Homepage/Nutritionanddiet.jpeg'
+import pabtg4 from '../../assets/images/Homepage/vtaiii.jpeg'
+import pabtg5 from '../../assets/images/Homepage/pgoals.png'
+import pabtg6 from '../../assets/images/Homepage/commuai.jpeg'
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
@@ -161,7 +161,7 @@ const Homepage = () => {
                                 <img src={imgpg} alt="" className='boxxximg' style={{height:'380px',width:'400px'}}/>
                                 <div className="overlayyy">
                                     <h3 className='overlayyhh'>Goal Setting</h3>
-                                    <button onClick={() => { navigate('/schedule') }} className='overlayybtt'>View</button>
+                                    <button onClick={() => { navigate('/goals') }} className='overlayybtt'>View</button>
                                 </div>
                             </div>
                             <div className="boxxx">

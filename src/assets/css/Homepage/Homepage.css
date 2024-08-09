@@ -4,6 +4,7 @@
 
 .header-main{
     height: 90px;
+    color: white;
     border-bottom:0.1px solid #E7E7E4;
     background-color: black;
 }
@@ -45,7 +46,7 @@ button:hover{
 }
 .contextbox-one-1-img{
     margin-top: 25px;
-    background-image: url('../images/homepage/gymhomepg.jpg');
+    background-image: url('../../images/Homepage/gymhomepg.jpg');
     height: 90%;
     width: 90%;
     background-size: cover;
@@ -171,7 +172,7 @@ button:hover{
     border-radius: 5px;
 }
 .imginsidedummy{
-    background-image: url('../images/homepage/dummmyyy.jpeg');
+    background-image: url('../../images/Homepage/dummmyyy.jpeg');
     height: 300px;
     width: 1000px;
     margin-right: 50px;
@@ -179,7 +180,7 @@ button:hover{
     background-size: cover;
 }
 .imginsidedummy2{
-    background-image: url('../images/homepage/dummyyy2.jpeg');
+    background-image: url('../../images/Homepage/dummyyy2.jpeg');
     height: 300px;
     width: 1000px;
     margin-right: 50px;
@@ -206,14 +207,14 @@ button:hover{
 }
 .abtimg
 {
-    background-image: url('../images/homepage/abtpagecontent.png');
+    background-image: url('../../images/Homepage/abtpagecontent.png');
     background-size: cover;
     height: 100%;
     width: 50vw;
 }
 .abtimgcont
 {
-    background-image: url('../images/homepage/rightabt.png');
+    background-image: url('../../images/Homepage/rightabt.png');
     background-size: cover;
     height: 100%;
     width: 50vw;
@@ -572,6 +573,7 @@ body {
     max-width: 300px;
     text-align: center;
     padding: 20px;
+    min-width: 315px;
     background-color: #f9f9f9;
     border: 1px solid #ddd;
     border-radius: 8px;
